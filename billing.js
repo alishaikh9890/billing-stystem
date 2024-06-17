@@ -10,32 +10,96 @@ let chocolate = 0;
 let dairy = 0;
 let numkeen =0;
 
+let nutella1 = 1;
+let noodles1= 1;
+let lays1 = 1;
+let oreo1 = 1;
+let chocolate1 = 1;
+let dairy1 = 1;
+let numkeen1 =1;
+
+
+
 for (let i = 0; i < snack_nutella_elements.length; i++) {
     snack_nutella_elements[i].addEventListener("change", function(){
 
         if(i==0){
-            nutella = nutella + snack_nutella_elements[i].value * 150;
+            nutella = nutella + 1 ;
+            //  nutella1 =nutella ;
+           
         } else if(i==1){
-            noodles = noodles + snack_nutella_elements[i].value * 10;
+            noodles = noodles + 1 ;
+            // noodles1 = noodles ;
+            
         } else if(i==2){
-            lays = lays + snack_nutella_elements[i].value * 10;
-        } else if(i==3){
-            oreo = oreo + snack_nutella_elements[i].value * 20;
+            lays = lays + 1 ;
+            // lays1 = lays ;
+            
+        } else if(i==3){ 
+            oreo = oreo + 1 ;
+            // oreo1 = oreo ;
+           
         } else if(i==4){
-            chocolate = chocolate + snack_nutella_elements[i].value * 50;
+            chocolate = 1 ;
+            // chocolate1 = chocolate ;
+           
          } else if(i==5){
-            dairy = dairy + snack_nutella_elements[i].value * 60;
+            dairy = dairy + 1 ;
+            // dairy1 = dairy ;
+           
         } else if(i==6){
-            numkeen = numkeen + snack_nutella_elements[i].value * 15;
+            numkeen = numkeen + 1 ;
+            // numkeen1 = numkeen ; 
         }
-let total_snack = document.getElementById("total-snack");
 
-        total_snack.value = nutella + noodles + lays + oreo + chocolate + dairy + numkeen;
 
-        document.getElementById("snacks-tax").value = total_snack.value * 118 / 100;
     });
 }
 
+let total_snack = document.getElementById("total-snack");
+
+        total_snack.value = nutella*150 + noodles*10 + lays*10 + oreo*20 + chocolate*50 + dairy*60 + numkeen*15;
+
+        document.getElementById("snacks-tax").value = total_snack.value * 118 / 100;
+const 
+
+products = [
+    {
+        title: "Nutella Choco Spread",
+        qty: nutella,
+        price: nutella*150
+    },
+    {
+        title: "Noodles (1 pack)",
+        qty: noodles,
+        price: noodles*10
+    },
+    {
+        title: "Lays (10 rs)",
+        qty: lays,
+        price: lays*10
+    },
+    {
+        title: "Oreo (20Rs)",
+        qty: oreo,
+        price: oreo*20
+    },
+    {
+        title: "Chocolate Muffins",
+        qty: chocolate,
+        price: chocolate*50
+    },
+    {
+        title: "Dairy Milk Silk (60 Rs)",
+        qty: dairy,
+        price: dairy*60
+    },
+    {
+        title: "Numkeen (15 Rs)",
+        qty: numkeen,
+        price: numkeen*15
+    }
+]
 
 // Grocery total and tax
 
@@ -67,6 +131,7 @@ for (let i = 0; i < grocery_elements.length; i++) {
         } else if(i==6){
             Tea = Tea + grocery_elements[i].value * 15;
         }
+
 let total_snack = document.getElementById("total-grocery");
 
         total_snack.value = Atta + Paasta + Rice + Oil + Sugar + Daal + Tea;
@@ -115,37 +180,43 @@ let total_snack = document.getElementById("total-Beauty");
 }
 
 
-let c_name = document.getElementById("c-name")
-let c_no = document.getElementById("c-no")
-let b_no = document.getElementById("b-no")
+document.getElementById("totalBill").addEventListener("click", function(){ 
+    
+let c_name = document.getElementById("c_name");
+let c_no = document.getElementById("c_no");
+let b_no = document.getElementById("b_no");
 
-document.getElementById("bill").innerHTML = `
-<p class="m-0">WELCOME TO SUPER MARKET</p>
-<p class="m-0">Phone No. 739275410</p>
-<div class="col-12 text-start">
-    <p>Bill No. : ${b_no}</p>
-    <p>Customer Name : ${c_name}</p>
-    <p>Phone No. : ${c_no}</p>
-    <p>****************************</p>
-    <table class="w-100">
-        <tbody>
-            <tr>
-                <td>Product</td>
-                <td>Qty</td>
-                <td>Price</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>****************************</p>
-    <table class="w-100">
-        <tbody>
-            <tr>
-                <td>Product</td>
-                <td>Qty</td>
-                <td>Price</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-`;
+document.getElementById("c_value").textContent = c_name.value;
+document.getElementById("p_value").textContent = c_no.value;
+document.getElementById("b_value").textContent = b_no.value;
 
+// Clear the table before adding new rows
+document.getElementById("billing_prod").innerHTML = "";
+
+// Iterate through the products and append each one to the table
+products.forEach(ele => {
+    // Create a new row element
+    const row = document.createElement("tr");
+
+    // Create and append title cell
+    const titleCell = document.createElement("td");
+    titleCell.textContent = ele.title;
+    row.appendChild(titleCell);
+
+    // Create and append quantity cell
+    const qtyCell = document.createElement("td");
+    qtyCell.textContent = ele.qty;
+    row.appendChild(qtyCell);
+
+    // Create and append price cell
+    const priceCell = document.createElement("td");
+    priceCell.textContent = ele.price;
+    row.appendChild(priceCell);
+
+    // Append the row to the table body
+    document.getElementById("billing_prod").appendChild(row);
+});
+
+})
+
+console.log(products)

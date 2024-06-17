@@ -26,6 +26,17 @@
     font-size: 13px;
 }
 
+.bill_area p{
+margin: 0;
+padding: 0;
+font-size: 12px;
+}
+
+.bill_area table{
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
     </style>
 
 </head>
@@ -44,15 +55,15 @@
             <div class="row py-1 bg-pink mb-5">
                 <div class="col-4 text-center text-white ">
                     <label>Customer Name</label>
-                    <input type="text" id="c_name" />
+                    <input type="text"  id="c_name" />
                 </div>
                 <div class="col-4 text-center text-white ">
                     <label>Contact No.</label>
-                    <input type="text" id="c_no" />
+                    <input type="number"  id="c_no" />
                 </div>
                 <div class="col-4 text-center text-white">
                     <label>Bill No.</label>
-                    <input type="text" id="b-no" />
+                    <input type="number"  id="b_no" />
                 </div>
             </div>
 
@@ -243,8 +254,35 @@
 
                 <div class="col-lg-3 bg-white">
                     <button class="btn bg-pink w-100">Bill Area</button>
-                    <div class="col-12 text-dark text-center" id="bill">
+                    <div class="col-12 text-dark text-center bill_area" id="bill">
                     
+                            <p class="m-0">WELCOME TO SUPER MARKET</p>
+                            <p class="m-0">Phone No. 739275410</p> 
+                              
+                            <div class="col-12 text-start">  
+                                <p>Bill No. : <b id="b_value"> </b></p>
+                                <p>Customer Name : <b id="c_value"> </b></p>
+                                <p>Phone No. : <b id="p_value"> </b></p>
+                           
+                                <p>******************************************</p>
+                                <table class="w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Product</td>
+                                            <td>Qty</td>
+                                            <td>Price</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>******************************************</p>
+                                <table class="w-100">
+                                    <tbody id="billing_prod">
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+
+
                     </div>
                     
                 </div>
@@ -308,7 +346,7 @@
                 <div class="col-lg-4">
                     <div class="row">
                         <div class="col-4">
-                            <button class="btn btn-md btn-light">Total Bill</button>
+                            <button class="btn btn-md btn-light"  id="totalBill">Total Bill</button>
                         </div>
                         <div class="col-5">
                             <button class="btn btn-md btn-light">Clear Field</button>
@@ -326,9 +364,9 @@
 
     </div>
 
-
+   <script src="billing.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="billing.js"></script>
 </body>
 
-</html>
+</html> 
+
