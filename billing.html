@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing System</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .bg-purple {
+            background-color: purple;
+        }
+
+        .bg-pink {
+            background-color: rgb(200, 77, 200);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45) inset;
+        }
+.shopingUnit label{
+    font-size: 13px;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid  bg-purple">
+        <div class="container ">
+            <div class="row mb-4">
+                <div class="col-12 text-center text-white bg-pink">
+                    <h5>Billing System</h5>
+                </div>
+            </div>
+
+
+            <div class="row py-1 bg-pink mb-5">
+                <div class="col-4 text-center text-white ">
+                    <label>Customer Name</label>
+                    <input type="text" id="c_name" />
+                </div>
+                <div class="col-4 text-center text-white ">
+                    <label>Contact No.</label>
+                    <input type="text" id="c_no" />
+                </div>
+                <div class="col-4 text-center text-white">
+                    <label>Bill No.</label>
+                    <input type="text" id="b-no" />
+                </div>
+            </div>
+
+            <div class="row mb-1 shopingUnit">
+                <div class="col-lg-3 bg-pink">
+                    <label for="">Snacks</label>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Nutella Choco Spread</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number"  id="snacks-nutella" value="0" class="w-100 snacks" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Noodles (1 pack)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number"  id="snacks-noodles" value="0" class="w-100 snacks" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Lays (10 rs)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number"  id="snacks-lays" value="0" class="w-100 snacks" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Oreo (20Rs)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number"  id="snacks-oreo" value="0" class="w-100 snacks" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Chocolate Muffins</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number"  value="0" class="w-100 snacks" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Dairy Milk Silk (60 Rs)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 snacks" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Numkeen (15 Rs)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 snacks" />
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 bg-pink">
+                    <label for="">Grocery</label>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Aashirwaad Atta (1kg)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 grocery" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Paasta (1kg)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 grocery" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Basmathi Rice (1kg)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 grocery" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Sunflower Oil (1ltr)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 grocery" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Refined Sugar (1kg)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 grocery" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Daal (1kg)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 grocery" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Tea Powder (1kg)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 grocery" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 bg-pink">
+                    <label for="">Beauty & Hygine</label>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Bathing Soap</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 Beauty" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Shampoo (1ltr)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 Beauty" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Body Lotion (1ltr)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 Beauty" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Face Creame</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 Beauty" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Shaving Foam</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 Beauty" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Face Mask (1peace)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 Beauty" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <label for="">Hand Sanitizer (50ml)</label>
+                        </div>
+                        <div class="col-5">
+                            <input type="number" value="0" class="w-100 Beauty" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 bg-white">
+                    <button class="btn bg-pink w-100">Bill Area</button>
+                    <div class="col-12 text-dark text-center" id="bill">
+                    
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="row bg-pink">
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">Total Snacks Price</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="number" id="total-snack"  class="w-100" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">Total Grocery Price</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="number"  id="total-grocery" class="w-100" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">Total Beauty & Hygine Price</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="number" id="total-Beauty"  class="w-100" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">Snacks Tax</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="number" id="snacks-tax"  class="w-100" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">Grocery Tax</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="number" id="grocery-tax" class="w-100" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">Beauty & Hygine Tax</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="number"  id="Beauty-tax"  class="w-100" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-4">
+                            <button class="btn btn-md btn-light">Total Bill</button>
+                        </div>
+                        <div class="col-5">
+                            <button class="btn btn-md btn-light">Clear Field</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-md btn-light">Exit</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="billing.js"></script>
+</body>
+
+</html>
