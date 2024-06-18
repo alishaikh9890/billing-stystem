@@ -15,11 +15,11 @@
             box-sizing: border-box;
         }
         .bg-purple {
-            background-color: purple;
+            background-color: #552e6c;
         }
 
         .bg-pink {
-            background-color: rgb(200, 77, 200);
+            background-color: #ddb6ef;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45) inset;
         }
 .shopingUnit label{
@@ -37,16 +37,27 @@ font-size: 12px;
     padding: 0;
     margin: 0;
 }
+.border-big-gray{
+    border: 10px solid gainsboro;
+}
+
+.border-grove{
+    border:8px ridge plum
+}
+
+.border-ridge{
+    border:5px ridge white
+}
     </style>
 
 </head>
 
 <body>
 
-    <div class="container-fluid  bg-purple">
+    <div class="container p-1 border-big-gray bg-purple">
         <div class="container ">
             <div class="row mb-4">
-                <div class="col-12 text-center text-white bg-pink">
+                <div class="col-12 text-center text-white border-grove bg-pink">
                     <h5>Billing System</h5>
                 </div>
             </div>
@@ -68,7 +79,7 @@ font-size: 12px;
             </div>
 
             <div class="row mb-1 shopingUnit">
-                <div class="col-lg-3 bg-pink">
+                <div class="col-lg-3 bg-pink border-ridge">
                     <label for="">Snacks</label>
                     <div class="row">
                         <div class="col-7">
@@ -130,7 +141,7 @@ font-size: 12px;
                 </div>
 
 
-                <div class="col-lg-3 bg-pink">
+                <div class="col-lg-3 bg-pink border-ridge">
                     <label for="">Grocery</label>
                     <div class="row">
                         <div class="col-7">
@@ -191,7 +202,7 @@ font-size: 12px;
                 </div>
 
 
-                <div class="col-lg-3 bg-pink">
+                <div class="col-lg-3 bg-pink border-ridge">
                     <label for="">Beauty & Hygine</label>
                     <div class="row">
                         <div class="col-7">
@@ -211,7 +222,7 @@ font-size: 12px;
                     </div>
                     <div class="row">
                         <div class="col-7">
-                            <label for="">Body Lotion (1ltr)</label>
+                            <label for="">Body Lotion (1 ltr)</label>
                         </div>
                         <div class="col-5">
                             <input type="number" value="0" class="w-100 Beauty" />

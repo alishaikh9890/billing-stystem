@@ -10,13 +10,6 @@ let chocolate = 0;
 let dairy = 0;
 let numkeen =0;
 
-let nutella1 = 1;
-let noodles1= 1;
-let lays1 = 1;
-let oreo1 = 1;
-let chocolate1 = 1;
-let dairy1 = 1;
-let numkeen1 =1;
 
 
 
@@ -52,18 +45,13 @@ for (let i = 0; i < snack_nutella_elements.length; i++) {
             // numkeen1 = numkeen ; 
         }
 
-
-    });
-}
-
 let total_snack = document.getElementById("total-snack");
 
         total_snack.value = nutella*150 + noodles*10 + lays*10 + oreo*20 + chocolate*50 + dairy*60 + numkeen*15;
 
         document.getElementById("snacks-tax").value = total_snack.value * 118 / 100;
-const 
 
-products = [
+        products = [
     {
         title: "Nutella Choco Spread",
         qty: nutella,
@@ -100,6 +88,11 @@ products = [
         price: numkeen*15
     }
 ]
+    });
+}
+
+
+
 
 // Grocery total and tax
 
@@ -113,32 +106,72 @@ let Sugar = 0;
 let Daal = 0;
 let Tea =0;
 
+
 for (let i = 0; i < grocery_elements.length; i++) {
     grocery_elements[i].addEventListener("change", function(){
 
         if(i==0){
-            Atta = Atta + grocery_elements[i].value * 60;
+            Atta = Atta + 1
         } else if(i==1){
-            Paasta = Paasta + grocery_elements[i].value * 85;
+            Paasta = Paasta + 1
         } else if(i==2){
-            Rice = Rice + grocery_elements[i].value * 77;
+            Rice = Rice + 1
         } else if(i==3){
-            Oil = Oil + grocery_elements[i].value * 104;
+            Oil = Oil + 1
         } else if(i==4){
-            Sugar = Sugar + grocery_elements[i].value * 52;
+            Sugar = Sugar + 1
          } else if(i==5){
-            Daal = Daal + grocery_elements[i].value * 60;
+            Daal = Daal + 1
         } else if(i==6){
-            Tea = Tea + grocery_elements[i].value * 15;
+            Tea = Tea + 1
         }
 
 let total_snack = document.getElementById("total-grocery");
 
-        total_snack.value = Atta + Paasta + Rice + Oil + Sugar + Daal + Tea;
+        total_snack.value = Atta * 60 + Paasta * 85 + Rice * 77 + Oil * 104 + Sugar * 52 + Daal * 60 + Tea * 15;
 
         document.getElementById("grocery-tax").value = total_snack.value * 118 / 100;
-    });
-}
+
+        products2 = [
+            {
+                title: "Aashirwaad Atta (1kg)",
+                qty: Atta,
+                price: Atta*150
+            },
+            {
+                title: "Paasta (1kg)",
+                qty: Paasta,
+                price: Paasta*10
+            },
+            {
+                title: "Basmathi Rice (1kg)",
+                qty: Rice,
+                price: Rice*10
+            },
+            {
+                title: "Sunflower Oil (1ltr)",
+                qty: Oil,
+                price: Oil*20
+            },
+            {
+                title: "Refined Sugar (1kg)",
+                qty: Sugar,
+                price: Sugar*50
+            },
+            {
+                title: "Daal (1kg)",
+                qty: Daal,
+                price: Daal*60
+            },
+            {
+                title: "Tea Powder (1kg))",
+                qty: Tea,
+                price: Tea*15
+            }
+        ]
+            });
+        }
+
 
 
 // Beauty & Hygine total and tax
@@ -157,25 +190,65 @@ for (let i = 0; i < Beauty_elements.length; i++) {
     Beauty_elements[i].addEventListener("change", function(){
 
         if(i==0){
-            Soap = Soap + Beauty_elements[i].value * 36;
+            Soap = Soap + 1;
         } else if(i==1){
-            Shampoo = Shampoo + Beauty_elements[i].value * 356;
+            Shampoo = Shampoo + 1;
         } else if(i==2){
-            Lotion = Lotion + Beauty_elements[i].value * 260;
+            Lotion = Lotion + 1;
         } else if(i==3){
-            Creame = Creame + Beauty_elements[i].value * 130;
+            Creame = Creame + 1;
         } else if(i==4){
-            Foam = Foam + Beauty_elements[i].value * 87;
+            Foam = Foam + 1;
          } else if(i==5){
-            Mask = Mask + Beauty_elements[i].value * 60;
+            Mask = Mask + 1;
         } else if(i==6){
-            Sanitizer = Sanitizer + Beauty_elements[i].value * 15;
+            Sanitizer = Sanitizer + 1;
         }
-let total_snack = document.getElementById("total-Beauty");
+        let total_snack = document.getElementById("total-Beauty");
 
-        total_snack.value = Soap + Shampoo + Lotion + Creame + Foam + Mask + Sanitizer;
+        total_snack.value = Soap * 36 + Shampoo * 356 + Lotion * 260 + Creame * 130 + Foam * 87 + Mask * 60 + Sanitizer * 15;
 
         document.getElementById("Beauty-tax").value = total_snack.value * 118 / 100;
+
+        products3 = [
+            {
+                title: "Bathing Soap",
+                qty: Soap,
+                price: Soap*150
+            },
+            {
+                title: "Shampoo (1 ltr)",
+                qty: Shampoo,
+                price: Shampoo*10
+            },
+            {
+                title: "Body Lotion (1 ltr)",
+                qty: Lotion,
+                price: Lotion*10
+            },
+            {
+                title: "Face Creame",
+                qty: Creame,
+                price: Creame*20
+            },
+            {
+                title: "Shaving Foam",
+                qty: Foam,
+                price: Foam*50
+            },
+            {
+                title: "Face Mask (1peace)",
+                qty: Mask,
+                price: Mask*60
+            },
+            {
+                title: "Hand Sanitizer (50ml)",
+                qty: Sanitizer,
+                price: Sanitizer*15
+            }
+        ]
+
+
     });
 }
 
@@ -191,10 +264,15 @@ document.getElementById("p_value").textContent = c_no.value;
 document.getElementById("b_value").textContent = b_no.value;
 
 // Clear the table before adding new rows
-document.getElementById("billing_prod").innerHTML = "";
+document.getElementById("billing_prod");
 
 // Iterate through the products and append each one to the table
 products.forEach(ele => {
+    if(ele.qty == 0) {
+
+    }else {
+
+  
     // Create a new row element
     const row = document.createElement("tr");
 
@@ -215,8 +293,72 @@ products.forEach(ele => {
 
     // Append the row to the table body
     document.getElementById("billing_prod").appendChild(row);
+
+}
 });
+
+
+products2.forEach(ele => {
+    if(ele.qty == 0) {
+
+    }else {
+
+  
+    // Create a new row element
+    const row = document.createElement("tr");
+
+    // Create and append title cell
+    const titleCell = document.createElement("td");
+    titleCell.textContent = ele.title;
+    row.appendChild(titleCell);
+
+    // Create and append quantity cell
+    const qtyCell = document.createElement("td");
+    qtyCell.textContent = ele.qty;
+    row.appendChild(qtyCell);
+
+    // Create and append price cell
+    const priceCell = document.createElement("td");
+    priceCell.textContent = ele.price;
+    row.appendChild(priceCell);
+
+    // Append the row to the table body
+    document.getElementById("billing_prod").appendChild(row);
+
+}
+});
+
+products3.forEach(ele => {
+    if(ele.qty == 0) {
+
+    }else {
+
+  
+    // Create a new row element
+    const row = document.createElement("tr");
+
+    // Create and append title cell
+    const titleCell = document.createElement("td");
+    titleCell.textContent = ele.title;
+    row.appendChild(titleCell);
+
+    // Create and append quantity cell
+    const qtyCell = document.createElement("td");
+    qtyCell.textContent = ele.qty;
+    row.appendChild(qtyCell);
+
+    // Create and append price cell
+    const priceCell = document.createElement("td");
+    priceCell.textContent = ele.price;
+    row.appendChild(priceCell);
+
+    // Append the row to the table body
+    document.getElementById("billing_prod").appendChild(row);
+
+}
+});
+
+
 
 })
 
-console.log(products)
